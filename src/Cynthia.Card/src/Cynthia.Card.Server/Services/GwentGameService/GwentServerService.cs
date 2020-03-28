@@ -173,12 +173,7 @@ namespace Cynthia.Card.Server
         public async Task<string> GetNotes(string connectionId)
         {
             await Task.CompletedTask;
-            return @"2020/3/28公告更新：
-重要公告！IMPORTANT!
-我们推出DIY服务器了！可以加q群945408322来体验！
-We Now Have a DIY server! Please Add QQ group 945408322 to Download.
-
-2019/11/1更新内容:
+            return @"2019/11/1更新内容:
 完成最后一张单卡(目前全卡可用):
 松鼠党银卡-艾雷亚斯
 
