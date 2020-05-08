@@ -14,6 +14,7 @@ public class InitSetting : MonoBehaviour
     public GameObject MusicVolumPanel;
     public GameObject EffectVolumPanel;
     public GameObject QualityPanel;
+    public GameObject GamePlayBGMsPanel;
 
     // Use this for initialization
     void Start()
@@ -22,8 +23,9 @@ public class InitSetting : MonoBehaviour
         FullPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("isFull", 0);
         QualityPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("quality", 2);
         CloseSoundPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("isCloseSound", 1);
-        MusicVolumPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("musicVolum", 5);
-        EffectVolumPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("effectVolum", 5);
+        MusicVolumPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("musicVolum", 7);
+        EffectVolumPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("effectVolum", 7);
+        GamePlayBGMsPanel.GetComponent<ChoseValue>().Index = PlayerPrefs.GetInt("isWitcher", 0);
     }
 
     // Update is called once per frame

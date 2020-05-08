@@ -27,9 +27,10 @@ public class SettingPanel : MonoBehaviour
         screenResolution = IndexToResolution(PlayerPrefs.GetInt("resolutionIndex", 2));
         isFullScreen = PlayerPrefs.GetInt("isFull", 0) == 0 ? true : false;
         isCloseSound = PlayerPrefs.GetInt("isCloseSound", 1) == 0 ? true : false;
-        musicVolum = PlayerPrefs.GetInt("musicVolum", 5);
-        effectVolum = PlayerPrefs.GetInt("effectVolum", 5);
+        musicVolum = PlayerPrefs.GetInt("musicVolum", 7);
+        effectVolum = PlayerPrefs.GetInt("effectVolum", 7);
         quality = PlayerPrefs.GetInt("quality", 2);
+
     }
     public Resolution IndexToResolution(int index)
     {
@@ -112,5 +113,11 @@ public class SettingPanel : MonoBehaviour
         isFullScreen = ((isFull == 0) ? true : false);
         Screen.SetResolution(screenResolution.width, screenResolution.height, isFullScreen);
 
+    }
+
+    //设置对局音效
+    public void SetGameplayMusic(int isWitcher)
+    {
+        PlayerPrefs.SetInt("isWitcher", isWitcher);
     }
 }
