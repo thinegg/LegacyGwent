@@ -17,12 +17,17 @@ namespace Cynthia.Card
             var Deck = Game.PlayersDeck[PlayerIndex].ToList();
 
             // 随机洗入卡组
+            await Shuffle(Deck);
+
+            return 0;
+        }
+
+        public async Task Shuffle(List<GameCard> Deck)
+        {
             foreach (var CardInDeck in Deck)
             {
                 await Game.CreateCard(CardInDeck.Status.CardId, Card.PlayerIndex, new CardLocation(RowPosition.MyDeck, RNG.Next(0, Game.PlayersDeck[Card.PlayerIndex].Count)));
             }
-
-            return 0;
         }
     }
 }
