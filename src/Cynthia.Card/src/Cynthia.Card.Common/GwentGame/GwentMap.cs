@@ -11174,6 +11174,26 @@ namespace Cynthia.Card
                     CardArtsId = "d16550000",
                 }
             },
+            {
+                "70030",//天球交汇
+                new GwentCard()
+                {
+                    CardId = "70030",
+                    Name = "天球交汇",
+                    Strength = 6,
+                    Group = Group.Gold,
+                    Faction = Faction.Neutral,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[] { },
+                    Flavor = "",
+                    Info = "部署：复制你的当前牌库的所有牌的基础同名牌随机洗入到你的牌库中。",
+                    CardArtsId = "d16550000",
+                }
+            },
         };
 
     }
