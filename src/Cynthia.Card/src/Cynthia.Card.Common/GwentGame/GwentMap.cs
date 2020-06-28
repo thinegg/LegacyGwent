@@ -11134,6 +11134,27 @@ namespace Cynthia.Card
                     CardArtsId = "d19160000",
                 }
             },
+            {
+                "70028",//不光彩的争斗者
+                new GwentCard()
+                {
+                    CardId = "70028",
+                    Name = "不光彩的争斗者",
+                    Strength = 7,
+                    Group = Group.Copper,
+                    Faction = Faction.Skellige,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[] { Categorie.Cultist,Categorie.Soldier},
+                    Flavor = "",
+                    Info = "部署：如果己方墓场中的卡牌数量大于牌组中的数量，则获得己方牌组数量的强化。",
+                    CardArtsId = "d15900000",
+                }
+            },
         };
+
     }
 }
