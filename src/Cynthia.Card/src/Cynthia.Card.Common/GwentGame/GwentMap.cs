@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 12);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 14);
 
 
         public class MultilingualString
@@ -11152,6 +11152,26 @@ namespace Cynthia.Card
                     Flavor = "",
                     Info = "部署：如果己方墓场中的卡牌数量大于牌组中的数量，则获得己方牌组数量的强化。",
                     CardArtsId = "d15900000",
+                }
+            },
+            {
+                "70029",//天球交汇
+                new GwentCard()
+                {
+                    CardId = "70029",
+                    Name = "天球交汇",
+                    Strength = 0,
+                    Group = Group.Gold,
+                    Faction = Faction.Neutral,
+                    CardUseInfo = CardUseInfo.AnyPlace,
+                    CardType = CardType.Special,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[] { Categorie.Special,Categorie.Spell},
+                    Flavor = "",
+                    Info = "复制你的当前牌库的所有牌的基础同名牌随机洗入到你的牌库中。",
+                    CardArtsId = "d16550000",
                 }
             },
         };
