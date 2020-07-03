@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 18);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 19);
 
 
         public class MultilingualString
@@ -7506,7 +7506,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Tactic,Categorie.Special},
                     Flavor = "就是一个绞盘。没什么可大惊小怪的。",
-                    Info = "使所有己方半场的“机械”单位获得3点增益。",
+                    Info = "绞盘：择一：从己方墓场中打出 1 张铜色“机械”牌，并使其获得佚亡。或所有己方机械+3增益。。",
                     CardArtsId = "20165900",
                 }
             },
