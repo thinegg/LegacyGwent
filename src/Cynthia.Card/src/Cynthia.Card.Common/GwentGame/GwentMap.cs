@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 19);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 20);
 
 
         public class MultilingualString
@@ -7163,7 +7163,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Soldier,Categorie.Aedirn},
                     Flavor = "呃，这些家伙真让人头疼。",
-                    Info = "对1个敌军造成4点伤害。",
+                    Info = "对一个敌军单位造成3点伤害，若目标未被摧毁，则与其对决。",
                     CardArtsId = "20167500",
                 }
             },
