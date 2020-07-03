@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 17);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 18);
 
 
         public class MultilingualString
@@ -3998,7 +3998,7 @@ namespace Cynthia.Card
                 {
                     CardId ="24021",
                     Name="寒冰巨人",
-                    Strength=6,
+                    Strength=8,
                     Group=Group.Copper,
                     Faction = Faction.Monsters,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -4008,7 +4008,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Ogroid},
                     Flavor = "我这辈子只当过一次逃兵，就是碰上寒冰巨人那次——我一点也没觉得丢人。",
-                    Info = "若场上任意位置有“刺骨冰霜”，则获得6点增益。",
+                    Info = "场上每有一个“刺骨冰霜“灾厄效果，便获得3点增益。每有一个“刺骨冰霜“灾厄效果出现在场上，便获得3点增益。",
                     CardArtsId = "13221200",
                 }
             },
