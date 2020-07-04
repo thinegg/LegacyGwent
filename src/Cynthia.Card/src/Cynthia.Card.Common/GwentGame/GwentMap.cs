@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 20);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 21);
 
 
         public class MultilingualString
@@ -11194,6 +11194,27 @@ namespace Cynthia.Card
                     CardArtsId = "d16550000",
                 }
             },
+            {
+                "70031",//沃米尔
+                new GwentCard()
+                {
+                    CardId = "70031",
+                    Name = "沃米尔",
+                    Strength = 8,
+                    Group = Group.Silver,
+                    Faction = Faction.NorthernRealms,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[] { Categorie.Redania,Categorie.Officer},
+                    Flavor = "",
+                    Info = "择一：选择1个单位将其增益转换为护甲；选择2个单位将其护甲转换为增益",
+                    CardArtsId = "d18050000",
+                }
+            },
+
         };
 
     }
