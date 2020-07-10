@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 30);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 37);
 
 
         public class MultilingualString
@@ -11293,6 +11293,46 @@ namespace Cynthia.Card
                     Flavor = "“你以为惹恼巨熊好玩吗？！”",
                     Info = "回合结束时，摧毁对方半场1个随机最弱单位，一共可生效3次。",
                     CardArtsId = "d13800000",
+                }
+            },
+            {
+                "70036",//齐齐摩女王
+                new GwentCard()
+                {
+                    CardId ="70036",
+                    Name = "齐齐摩女王",
+                    Strength = 12,
+                    Group = Group.Gold,
+                    Faction = Faction.Monsters,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Insectoid},
+                    Flavor = "许多虫类都有一只虫后。这一只特别要命。",
+                    Info = "吞噬己方牌组中所有战力小于5的铜色单位牌，每吞噬1张便生成1张“齐齐摩战士”的轶亡原始同名牌，将其基础战力设为2。",
+                    CardArtsId = "d19130000",
+                }
+            },
+            {
+                "70037",//假面舞会
+                new GwentCard()
+                {
+                    CardId ="70037",
+                    Name="假面舞会",
+                    Strength=0,
+                    Group=Group.Gold,
+                    Faction = Faction.Nilfgaard,
+                    CardUseInfo = CardUseInfo.AnyPlace,
+                    CardType = CardType.Special,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Tactic,Categorie.Special},
+                    Flavor = "欧菲丽·凡·莫拉汉姆喜欢举办盛大的庆典。虽然总有一些宾客会消失得无影无踪，但人们对此好像却无动于衷……",
+                    Info = "随机生成己方起始牌组中不重复的非间谍铜色单位牌的轶亡原始同名牌到同排，将其基础战力设为2，直至填满此排。",
+                    CardArtsId = "d19930000",
                 }
             },
         };
