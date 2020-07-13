@@ -6,7 +6,7 @@ namespace Cynthia.Card
 {
     [CardEffectId("70037")]//化妆舞会
     public class MasqueradeBall : CardEffect
-    {//随机生成己方起始牌组中不重复的非间谍铜色单位牌的轶亡原始同名牌到同排，将其基础战力设为2，直至填满此排。
+    {//生成不重复的己方起始牌组铜色单位牌的轶亡原始同名牌到同排，将其基础战力设为2。
         public MasqueradeBall(GameCard card) : base(card) { }
         public override async Task<int> CardUseEffect()
         {
@@ -15,48 +15,31 @@ namespace Cynthia.Card
             //var list = Game.PlayersDeck[Card.PlayerIndex].Where(x => x.CardInfo().CardUseInfo == CardUseInfo.MyRow && (x.Status.Group == Group.Silver || x.Status.Group == Group.Copper) && (x.CardInfo().CardType == CardType.Unit));
             var cardlist = Game.PlayerBaseDeck[PlayerIndex].Deck
                 .Where(x => x.Group == Group.Copper)
-                .GroupBy(x => x.CardId).ToList();
+                .ToList();
 
             if (Game.RowToList(PlayerIndex, row).Count < Game.RowMaxCount && cardlist.Count > 0)
             {//单排有位置，牌库有铜单位
-                /*
                 var cardsId = Game.PlayerBaseDeck[PlayerIndex].Deck
                 .Distinct()
-                .Where(x => x.CardInfo().CardUseInfo == CardUseInfo.MyRow && x.Is(Group.Copper, CardType.Unit))
                 .Where(x => x.Is(type: CardType.Unit, filter: x => x.IsAnyGroup(Group.Copper) && !x.HasAnyCategorie(Categorie.Agent)))
-                .Mess(Game.RNG)
-                .Take(Game.RowMaxCount - Game.RowToList(PlayerIndex, row).Count)
-                .Select(x => x.CardId).ToArray();
-                
-                var cardsId = Game.PlayerBaseDeck[PlayerIndex].Deck
-                    .Distinct()
-                    .Where(x => x.Group == Group.Copper)
-                    .GroupBy(x => x.CardId).ToList();
-                */
-                var cardsId = Game.PlayerBaseDeck[PlayerIndex].Deck
-                .Distinct()
-                .Where(x => x.Is(type: CardType.Unit, filter: x => x.IsAnyGroup(Group.Copper, Group.Silver) && !x.HasAnyCategorie(Categorie.Agent)))
                 .Mess(Game.RNG)
                 .Take(Game.RowMaxCount - Game.RowToList(PlayerIndex, row).Count)
                 .Select(x => x.CardId).ToArray();
 
                 int num = 0;
-                while (!(Game.RowToList(PlayerIndex, row).Count >= Game.RowMaxCount || cardsId.Length  > 0))
+
+                while ((Game.RowToList(PlayerIndex, row).Count < Game.RowMaxCount && cardsId.Length > num))
                 {
-                    
-                    var position = Card.GetLocation();
-                    await Game.CreateCard(cardsId[num], PlayerIndex, position, setting: ToDoomed);
-                    
-                    //await target.Effect.Transform(CardId.Draugir, Card, x => x.Status.Strength = 1);
-                    // await target.Effect.Resurrect(new CardLocation(row, int.MaxValue), Card);
+                    await Game.CreateCardAtEnd(cardsId[num], PlayerIndex, row, setting: Lesser);
                     num++;
                 }
             }
             return 0;
         }
-        private void ToDoomed(CardStatus status)
+        private void Lesser(CardStatus status)
         {
             status.IsDoomed = true;
+            status.Strength = 2;
         }
     }
 }
