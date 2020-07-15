@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 35);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 40);
 
 
         public class MultilingualString
@@ -2652,7 +2652,7 @@ namespace Cynthia.Card
                 {
                     CardId ="15009",
                     Name="羊角魔",
-                    Strength=14,
+                    Strength=15,
                     Group=Group.Copper,
                     Faction = Faction.Neutral,
                     CardUseInfo = CardUseInfo.MyRow,
