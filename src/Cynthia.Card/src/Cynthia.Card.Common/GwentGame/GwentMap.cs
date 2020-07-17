@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 40);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 42);
 
 
         public class MultilingualString
@@ -11333,6 +11333,44 @@ namespace Cynthia.Card
                     Flavor = "欧菲丽·凡·莫拉汉姆喜欢举办盛大的庆典。虽然总有一些宾客会消失得无影无踪，但人们对此好像却无动于衷……",
                     Info = "随机生成己方起始牌组中不重复的非间谍铜色单位牌的轶亡原始同名牌到同排，将其基础战力设为2，直至填满此排。",
                     CardArtsId = "d19930000",
+                }
+            },
+            {
+                "70038",//西格瓦尔德
+                new GwentCard()
+                {
+                    CardId ="70038",
+                    Name="西格瓦尔德",
+                    Strength=1,
+                    Group = Group.Gold,
+                    Faction = Faction.Skellige,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    Categories = new Categorie[] {Categorie.Soldier,Categorie.Cursed},
+                    Flavor = "能活够一定年岁的维尔卡战士会赢得整个家族的尊敬。",
+                    Info = "回合结束时，复活至随机排，并获得1点强化。",
+                    CardArtsId = "d16710000",
+                }
+            },
+            {
+                "70039",//奎特家族先锋
+                new GwentCard()
+                {
+                    CardId ="70039",
+                    Name="奎特家族先锋",
+                    Strength = 8,
+                    Group = Group.Copper,
+                    Faction = Faction.Skellige,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    Categories = new Categorie[] {Categorie.ClanAnCraite,Categorie.Soldier},
+                    Flavor = "“什么？卷心菜？没什么好抢的时候真难受。”",
+                    Info = "对1个敌军随机单位造成3点伤害。被丢弃时对1个敌军随机单位造成3点伤害，并将自身2张同名牌加入牌组底部。",
+                    CardArtsId = "d22400000",
                 }
             },
         };
