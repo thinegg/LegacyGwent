@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 42);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 44);
 
 
         public class MultilingualString
@@ -2652,7 +2652,7 @@ namespace Cynthia.Card
                 {
                     CardId ="15009",
                     Name="羊角魔",
-                    Strength=15,
+                    Strength=14,
                     Group=Group.Copper,
                     Faction = Faction.Neutral,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -5805,7 +5805,7 @@ namespace Cynthia.Card
                 {
                     CardId ="34024",
                     Name="阿尔巴师枪兵",
-                    Strength=3,
+                    Strength=4,
                     Group=Group.Copper,
                     Faction = Faction.Nilfgaard,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -5815,7 +5815,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Soldier},
                     Flavor = "宣誓效忠吾皇恩希尔·恩瑞斯……不然就受刑吧！",
-                    Info = "召唤所有同名牌。",
+                    Info = "回合结束时从卡组召唤1张同名牌。",
                     CardArtsId = "16231100",
                 }
             },
@@ -10197,7 +10197,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.ClanDrummond,Categorie.Soldier},
                     Flavor = "我们的敌人会像打上嶙峋海岸的波浪一样，倒在我们的盾前。",
-                    Info = "召唤所有同名牌。",
+                    Info = "对一个单位造成1点伤害，若其受伤，从卡组打出1张自身同名牌",
                     CardArtsId = "15231810",
                 }
             },
