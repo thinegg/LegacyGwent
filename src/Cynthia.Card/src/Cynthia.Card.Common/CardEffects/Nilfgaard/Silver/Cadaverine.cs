@@ -29,7 +29,7 @@ namespace Cynthia.Card
                 await Game.Debug($"筛选出了{targetCards.Count()}个");
                 foreach (var card in targetCards)
                 {
-                    await card.Effect.Damage(2, Card, BulletType.RedLight);
+                    await card.Effect.Damage(3, Card, BulletType.RedLight);
                 }
             }
             else if (switchCard == 1)

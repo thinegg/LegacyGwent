@@ -1602,7 +1602,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Tactic,Categorie.Special},
                     Flavor = "士气加一分，听力减三分。",
-                    Info = "使5个相邻单位获得3点增益。",
+                    Info = "使7个相邻单位获得3点增益。",
                     CardArtsId = "11320700",
                 }
             },
@@ -2062,7 +2062,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Alchemy,Categorie.Special,Categorie.Item},
                     Flavor = "瑞达尼亚人将巫师的手腕拧到背后，给他戴上镣铐，并使劲晃了晃。特拉诺瓦叫喊挣扎，还弯下腰呕吐呻吟——杰洛特这才明白手铐的材质。",
-                    Info = "改变1个单位的锁定状态。若为敌军单位，则对它造成4点伤害。",
+                    Info = "改变1个单位的锁定状态。若为敌军单位，则对它造成5点伤害。",
                     CardArtsId = "11331900",
                 }
             },
@@ -3906,7 +3906,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.WildHunt,Categorie.Soldier},
                     Flavor = "白霜将至。",
-                    Info = "对1个敌军单位造成3点伤害。若目标位于“刺骨冰霜”之下或被摧毁，则获得2点增益。",
+                    Info = "对1个敌军单位造成4点伤害。若目标位于“刺骨冰霜”之下或被摧毁，则获得2点增益。",
                     CardArtsId = "13230900",
                 }
             },
@@ -4913,7 +4913,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Tactic,Categorie.Special},
                     Flavor = "“请你出手要多少钱？” “看情况喽。比如说目标是你，大改100奥伦币左右。”",
-                    Info = "对1个敌军单位造成8点伤害，再对1个敌军单位造成8点伤害。",
+                    Info = "对1个敌军单位造成8点伤害，再对1个敌军单位造成9点伤害。",
                     CardArtsId = "16310100",
                 }
             },
@@ -5334,7 +5334,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Alchemy,Categorie.Special,Categorie.Item},
                     Flavor = "我不会拿自己的性命去碰运气。我会拿上一把长剑，厚厚地涂上一层吊死鬼之毒。",
-                    Info = "择一：对1个敌军单位以及所有与它同类型的单位造成2点伤害；或摧毁1个铜色/银色“中立”单位。",
+                    Info = "择一：对1个敌军单位以及所有与它同类型的单位造成3点伤害；或摧毁1个铜色/银色“中立”单位。",
                     CardArtsId = "20154000",
                 }
             },
@@ -6229,7 +6229,7 @@ namespace Cynthia.Card
                 {
                     CardId ="42004",
                     Name="范德格里夫特",
-                    Strength=7,
+                    Strength=8,
                     Group=Group.Gold,
                     Faction = Faction.NorthernRealms,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -6841,7 +6841,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Special,Categorie.Item},
                     Flavor = "在阿德卡莱的一次骑士比武中，赛尔奇克打断了范德格里夫特的长剑。于是，愤怒的范德格里夫特下令铸造一把新的兵刃，还在上面附了强大的符文石。",
-                    Info = "择一：摧毁1个铜色/银色“诅咒单位”敌军单位；或造成9点伤害，放逐所摧毁的单位。",
+                    Info = "择一：摧毁1个铜色/银色“诅咒生物”敌军单位；或造成10点伤害，放逐所摧毁的单位。",
                     CardArtsId = "20163300",
                 }
             },
@@ -7817,7 +7817,7 @@ namespace Cynthia.Card
                 {
                     CardId ="52008",
                     Name="米尔瓦",
-                    Strength=6,
+                    Strength=8,
                     Group=Group.Gold,
                     Faction = Faction.ScoiaTael,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -8201,7 +8201,7 @@ namespace Cynthia.Card
                 {
                     CardId ="53014",
                     Name="麦莉",
-                    Strength=4,
+                    Strength=5,
                     Group=Group.Silver,
                     Faction = Faction.ScoiaTael,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -9467,7 +9467,7 @@ namespace Cynthia.Card
                 {
                     CardId ="63010",
                     Name="德莱格·波·德乌",
-                    Strength=6,
+                    Strength=7,
                     Group=Group.Silver,
                     Faction = Faction.Skellige,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -9497,7 +9497,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.ClanDimun,Categorie.Officer},
                     Flavor = "敬尼弗迦德皇帝，祝他不得善终！",
-                    Info = "造成6点伤害。若摧毁目标，则使己方墓场中最强的单位获得3点强化。",
+                    Info = "造成7点伤害。若摧毁目标，则使己方墓场中最强的单位获得3点强化。",
                     CardArtsId = "15220700",
                 }
             },
@@ -9527,7 +9527,7 @@ namespace Cynthia.Card
                 {
                     CardId ="63013",
                     Name="尤娜",
-                    Strength=6,
+                    Strength=7,
                     Group=Group.Silver,
                     Faction = Faction.Skellige,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -9887,7 +9887,7 @@ namespace Cynthia.Card
                 {
                     CardId ="64011",
                     Name="德拉蒙家族好战分子",
-                    Strength=8,
+                    Strength=9,
                     Group=Group.Copper,
                     Faction = Faction.Skellige,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -9917,7 +9917,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Soldier,Categorie.ClanTuirseach},
                     Flavor = "记好了：我们对朋友掏心窝，对敌人挥斧子。",
-                    Info = "被复活后获得3点强化。",
+                    Info = "被复活后获得4点强化。",
                     CardArtsId = "15231300",
                 }
             },
@@ -10227,7 +10227,7 @@ namespace Cynthia.Card
                 {
                     CardId ="64028",
                     Name="迪门家族海贼",
-                    Strength=3,
+                    Strength=2,
                     Group=Group.Copper,
                     Faction = Faction.Skellige,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -11019,7 +11019,7 @@ namespace Cynthia.Card
                 {
                     CardId ="70022",
                     Name = "齐齐摩工兵",
-                    Strength = 4,
+                    Strength = 5,
                     Group = Group.Copper,
                     Faction = Faction.Monsters,
                     CardUseInfo = CardUseInfo.MyRow,
