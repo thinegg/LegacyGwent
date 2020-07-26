@@ -189,7 +189,11 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
+<<<<<<< HEAD
         public static Version CardMapVersion { get; } = new Version(1, 0, 0, 50);
+=======
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 54);
+>>>>>>> eab0a376... 新卡：莱里亚强弩手
 
 
         public class MultilingualString
@@ -11373,7 +11377,26 @@ namespace Cynthia.Card
                     CardArtsId = "d22400000",
                 }
             },
+            {
+                "70040",//莱里亚强弩手
+                new GwentCard()
+                {
+                    CardId ="70040",
+                    Name="莱里亚强弩手",
+                    Strength=8,
+                    Group=Group.Copper,
+                    Faction = Faction.NorthernRealms,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Soldier},
+                    Flavor = "“我能百步穿杨！不过，我可能得多射几箭……”",
+                    Info = "每当相邻单位获得增益，对随机敌军单位造成1点伤害；自身增益大于或等于基础战力一半时，改为造成2点伤害。",
+                    CardArtsId = "d15410000",
+                }
+            }
         };
-
     }
 }
