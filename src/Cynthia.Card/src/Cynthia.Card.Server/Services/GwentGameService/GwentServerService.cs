@@ -177,8 +177,7 @@ namespace Cynthia.Card.Server
         public async Task<string> GetNotes(string connectionId)
         {
             await Task.CompletedTask;
-            return @"这里是neal的设计师服务器
-";
+            return @"这里是neal的设计师服务器";
         }
         //-------------------------------------------------------------------------
         public int GetUserCount()
