@@ -189,11 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-<<<<<<< HEAD
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 50);
-=======
         public static Version CardMapVersion { get; } = new Version(1, 0, 0, 54);
->>>>>>> eab0a376... 新卡：莱里亚强弩手
 
 
         public class MultilingualString
