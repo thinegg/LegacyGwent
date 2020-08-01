@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 54);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 56);
 
 
         public class MultilingualString
@@ -328,7 +328,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{},
                     Flavor = "富克斯家族的传奇创始人波罗斯因为酗酒丢了性命。当时他的金戒指掉进了一条小溪，他去捞的时候晕了过去。",
-                    Info = "在所在排洒下“黄金酒沫”。",
+                    Info = "己方回合结束时，在所在排洒下“黄金酒沫”。",
                     CardArtsId = "20024400",
                 }
             },
@@ -3653,7 +3653,7 @@ namespace Cynthia.Card
                 {
                     CardId ="24004",
                     Name="大狮鹫",
-                    Strength=10,
+                    Strength=9,
                     Group=Group.Copper,
                     Faction = Faction.Monsters,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -3663,7 +3663,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Beast},
                     Flavor = "大狮鹫也是狮鹫，只是更加凶悍。",
-                    Info = "移除所在排的灾厄。",
+                    Info = "移除所在排的灾厄。从对方墓场中1张铜色单位牌移至己方墓场。",
                     CardArtsId = "13230700",
                 }
             },
@@ -4069,7 +4069,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Beast},
                     Flavor = "有个迷信的家伙用蜡堵住耳朵，结果什么也听不到，包括警告——他的船直接撞上了礁石。",
-                    Info = "对1个敌军单位造成4点伤害，若目标位于“血月”之下，则伤害变为7点。",
+                    Info = "对1个敌军单位造成4点伤害，场上每有1个“血月”灾厄效果，伤害提高2点。",
                     CardArtsId = "13240900",
                 }
             },
@@ -7345,7 +7345,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Mage,Categorie.Cursed},
                     Flavor = "萨宾娜的诅咒谁也不放过，就连其他的女术士也难以幸免。",
-                    Info = "若同排有1个“诅咒生物”单位，则造成7点伤害。",
+                    Info = "造成7点伤害，同排每有1个“诅咒生物”单位，伤害提高1点。",
                     CardArtsId = "20163000",
                 }
             },
@@ -7726,7 +7726,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Dwarf},
                     Flavor = "怎么了，公主？吃不惯野味吗？嗯？",
-                    Info = "增益自身等同于最后打出的非同名“矮人”单位牌的初始战力。",
+                    Info = "增益自身等同于本小局打出的“矮人”单位牌的最强基础战力。",
                     CardArtsId = "20008000",
                 }
             },
@@ -10438,7 +10438,7 @@ namespace Cynthia.Card
                     IsDerive = true,
                     Categories = new Categorie[]{ Categorie.Cursed,Categorie.Token},
                     Flavor = "“呃，座头鲸应该没那么大。那是头长须鲸。”“嘴那么短的长须鲸？你被药草冲昏了头吗！”",
-                    Info = "回合结束时移至随机排，对同排所有其他单位造成1点伤害。 间谍。",
+                    Info = "回合结束时移至随机排，对同排所有其他单位造成1点伤害。遗愿：再次触发此能力。间谍。",
                     CardArtsId = "15240300",
                 }
             },
