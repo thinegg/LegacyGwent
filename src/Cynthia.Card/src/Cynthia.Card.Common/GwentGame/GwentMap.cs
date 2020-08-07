@@ -3998,7 +3998,7 @@ namespace Cynthia.Card
                 {
                     CardId ="24021",
                     Name="寒冰巨人",
-                    Strength=6,
+                    Strength=7,
                     Group=Group.Copper,
                     Faction = Faction.Monsters,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -4059,7 +4059,7 @@ namespace Cynthia.Card
                 {
                     CardId ="24024",
                     Name="女蛇妖",
-                    Strength=6,
+                    Strength=7,
                     Group=Group.Copper,
                     Faction = Faction.Monsters,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -10197,7 +10197,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.ClanDrummond,Categorie.Soldier},
                     Flavor = "我们的敌人会像打上嶙峋海岸的波浪一样，倒在我们的盾前。",
-                    Info = "对一个单位造成1点伤害，若其受伤，从卡组打出1张自身同名牌",
+                    Info = "对一个已受伤的敌军单位造成2点伤害，从卡组打出1张自身同名牌。",
                     CardArtsId = "15231810",
                 }
             },
