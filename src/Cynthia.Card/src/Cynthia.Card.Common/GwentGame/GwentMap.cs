@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 56);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 57);
 
 
         public class MultilingualString
@@ -328,7 +328,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{},
                     Flavor = "富克斯家族的传奇创始人波罗斯因为酗酒丢了性命。当时他的金戒指掉进了一条小溪，他去捞的时候晕了过去。",
-                    Info = "己方回合结束时，在所在排洒下“黄金酒沫”。",
+                    Info = "在所在排洒下“黄金酒沫”。被移动或受到伤害时重复此能力。",
                     CardArtsId = "20024400",
                 }
             },
@@ -9112,7 +9112,7 @@ namespace Cynthia.Card
                     IsDoomed = false,
                     IsCountdown = false,
                     IsDerive = false,
-                    Categories = new Categorie[]{ Categorie.ClanAnCraite},
+                    Categories = new Categorie[]{ Categorie.ClanAnCraite,Categorie.Machine},
                     Flavor = "只消对尼弗迦德人提起这个名字，他们就会吓得尿裤子……",
                     Info = "回合结束时，使左侧单位获得1点强化，右侧单位收到1点伤害。5点护甲。",
                     CardArtsId = "15210900",
@@ -11348,7 +11348,7 @@ namespace Cynthia.Card
                     CardType = CardType.Unit,
                     IsDoomed = false,
                     IsCountdown = false,
-                    Categories = new Categorie[] {Categorie.Soldier,Categorie.Cursed},
+                    Categories = new Categorie[] {Categorie.Soldier,Categorie.Cursed,Categorie.Cultist},
                     Flavor = "能活够一定年岁的维尔卡战士会赢得整个家族的尊敬。",
                     Info = "回合结束时，复活至随机排，并获得1点强化。",
                     CardArtsId = "d16710000",
