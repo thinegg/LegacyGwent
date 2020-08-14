@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 57);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 59);
 
 
         public class MultilingualString
@@ -4069,7 +4069,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Beast},
                     Flavor = "有个迷信的家伙用蜡堵住耳朵，结果什么也听不到，包括警告——他的船直接撞上了礁石。",
-                    Info = "对1个敌军单位造成4点伤害，场上每有1个“血月”灾厄效果，伤害提高2点。",
+                    Info = "对1个敌军单位造成4点伤害，若目标位于“血月”之下，则伤害变为7点。",
                     CardArtsId = "13240900",
                 }
             },
@@ -5805,7 +5805,7 @@ namespace Cynthia.Card
                 {
                     CardId ="34024",
                     Name="阿尔巴师枪兵",
-                    Strength=4,
+                    Strength=5,
                     Group=Group.Copper,
                     Faction = Faction.Nilfgaard,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -5815,7 +5815,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Soldier},
                     Flavor = "宣誓效忠吾皇恩希尔·恩瑞斯……不然就受刑吧！",
-                    Info = "回合结束时从卡组召唤1张同名牌。",
+                    Info = "回合开始时从卡组召唤1张同名牌。2点护甲。",
                     CardArtsId = "16231100",
                 }
             },
@@ -6710,7 +6710,7 @@ namespace Cynthia.Card
                 {
                     CardId ="43015",
                     Name="帕薇塔公主",
-                    Strength=3,
+                    Strength=5,
                     Group=Group.Silver,
                     Faction = Faction.NorthernRealms,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -11215,23 +11215,23 @@ namespace Cynthia.Card
                 }
             },
             {
-                "70032",//巨橡
+                "70032",//加斯科
                 new GwentCard()
                 {
                     CardId = "70032",
-                    Name = "巨橡",
+                    Name = "加斯科",
                     Strength = 7,
                     Group = Group.Gold,
-                    Faction = Faction.ScoiaTael,
+                    Faction = Faction.Neutral,
                     CardUseInfo = CardUseInfo.MyRow,
                     CardType = CardType.Unit,
                     IsDoomed = false,
                     IsCountdown = false,
                     IsDerive = false,
                     Categories = new Categorie[] { },
-                    Flavor = "远古橡树的心被仇恨腐蚀得千疮百孔。布洛克莱昂的树木万念俱灰，无风自摇。",
-                    Info = "若位于手牌、牌组或己方半场：己方回合中，有单位改变所在排别时获得1点增益。",
-                    CardArtsId = "d13620000",
+                    Flavor = "“你手下的人可就是史帕拉流亡军？你便是人称野狗公爵的那位？”",
+                    Info = "若位于手牌、牌组或己方半场：己方回合中，有单位被改变所在排别时获得1点增益。",
+                    CardArtsId = "d15200000",
                 }
             },
             {
@@ -11240,8 +11240,8 @@ namespace Cynthia.Card
                 {
                     CardId = "70033",
                     Name = "战象",
-                    Strength = 13,
-                    Group = Group.Gold,
+                    Strength = 10,
+                    Group = Group.Silver,
                     Faction = Faction.NorthernRealms,
                     CardUseInfo = CardUseInfo.MyRow,
                     CardType = CardType.Unit,
@@ -11391,6 +11391,26 @@ namespace Cynthia.Card
                     Flavor = "“我能百步穿杨！不过，我可能得多射几箭……”",
                     Info = "每当相邻单位获得增益，对随机敌军单位造成1点伤害；自身增益大于或等于基础战力一半时，改为造成2点伤害。",
                     CardArtsId = "d15410000",
+                }
+            },
+            {
+                "70041",//斯瓦勃洛狂信者 SvalblodFanatic
+                new GwentCard()
+                {
+                    CardId ="70041",
+                    Name="斯瓦勃洛狂信者",
+                    Strength=11,
+                    Group=Group.Copper,
+                    Faction = Faction.Skellige,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cultist},
+                    Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
+                    Info = "回合开始时对自身造成2点伤害，然后随机对一个敌军单位造成2点伤害。",
+                    CardArtsId = "d16730000",
                 }
             }
         };

@@ -6,7 +6,7 @@ namespace Cynthia.Card
 {
     [CardEffectId("24024")]//女蛇妖
     public class Lamia : CardEffect
-    {//对1个敌军单位造成4点伤害，场上每有1个“血月”灾厄效果，伤害提高2点。
+    {//对1个敌军单位造成4点伤害，若目标位于“血月”之下，则伤害变为7点。
         public Lamia(GameCard card) : base(card) { }
         public override async Task<int> CardPlayEffect(bool isSpying, bool isReveal)
         {
@@ -14,9 +14,8 @@ namespace Cynthia.Card
             {
                 return 0;
             }
-            //int point = Game.GameRowEffect[AnotherPlayer][target.Status.CardRow.MyRowToIndex()].RowStatus == RowStatus.BloodMoon ? 7 : 4;
-            var count = Game.GameRowEffect.SelectMany(x => x.Select(x => x.RowStatus)).Where(x => x == RowStatus.BloodMoon).Count();
-            await target.Effect.Damage(4 + 2 * count, Card);
+            int point = Game.GameRowEffect[AnotherPlayer][target.Status.CardRow.MyRowToIndex()].RowStatus == RowStatus.BloodMoon ? 7 : 4;
+            await target.Effect.Damage(point, Card);
             return 0;
         }
     }
