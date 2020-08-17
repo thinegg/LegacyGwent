@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 59);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 60);
 
 
         public class MultilingualString
@@ -10197,7 +10197,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.ClanDrummond,Categorie.Soldier},
                     Flavor = "我们的敌人会像打上嶙峋海岸的波浪一样，倒在我们的盾前。",
-                    Info = "对一个已受伤的敌军单位造成2点伤害，从卡组打出1张自身同名牌。",
+                    Info = "对一个敌军单位造成2点伤害，若目标已受伤，从卡组打出1张自身同名牌。",
                     CardArtsId = "15231810",
                 }
             },
