@@ -540,5 +540,8 @@ namespace Cynthia.Card
         public const string CursedImmortals = "70024";
 
         public const string ChampionofSvalbold = "70035";
+
+        public const string VernossielsCommando = "70042";
+        public const string Vernossiel = "70044";
     }
 }
