@@ -14,6 +14,12 @@ namespace Cynthia.Card
             {
                 await Game.CreateCard(CardId.VernossielsCommando, Game.AnotherPlayer(Card.PlayerIndex), new CardLocation(RowPosition.MyDeck, RNG.Next(0, Game.PlayersDeck[Game.AnotherPlayer(Card.PlayerIndex)].Count)));
             }
+
+            var cards = Game.PlayersDeck[Game.AnotherPlayer(Card.PlayerIndex)].Where(x => x.Status.CardId == CardId.VernossielsCommando).ToList();
+            foreach (var card in cards)
+            {
+                await card.Effect.SetCountdown(offset: -1);
+            }
             return 0;
         }
     }

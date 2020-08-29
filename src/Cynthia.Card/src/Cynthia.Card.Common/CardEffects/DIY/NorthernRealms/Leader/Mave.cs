@@ -12,12 +12,11 @@ namespace Cynthia.Card
         {
             //半场
             var cards = await Game.GetSelectPlaceCards(Card, 1, selectMode: SelectModeType.MyRow);
-            if (cards.Count() == 0)
+            if (cards.Count() > 0)
             {
-                return 0;
+                await cards.Single().Effect.Boost(4, Card);
             }
-            await cards.Single().Effect.Boost(4, Card);
-
+            
             //手牌
             var hand_cards = Game.PlayersHandCard[Card.PlayerIndex].Where(x => (x.Status.Type == CardType.Unit));
             var list = hand_cards.ToList();
@@ -25,10 +24,11 @@ namespace Cynthia.Card
             var result = await Game.GetSelectMenuCards
                 (Card.PlayerIndex, list.ToList(), 1, "选择增益1张牌");
             //如果玩家一张卡都没选择,没有效果
-            if (!result.Any()) return 0;
-            var card = result.Single();
-            await card.Effect.Boost(4, Card);
-
+            if (result.Any()) 
+            {
+                var card = result.Single();
+                await card.Effect.Boost(4, Card);
+            }
 
             //牌库
             var deck_list = Game.PlayersDeck[Card.PlayerIndex].Where(x => x.CardInfo().CardType == CardType.Unit)//乱序列出所有单位

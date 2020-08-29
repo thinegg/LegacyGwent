@@ -25,17 +25,18 @@ namespace Cynthia.Card
                 await Card.Effect.Summon(location, Card);
             }
         }
-
+        
         public async Task HandleEvent(AfterUnitDown @event)
         {
-            if (@event.Target.Status.CardId != CardId.Vernossiel) return;
-            await Card.Effect.SetCountdown(offset: -1);
+            if (@event.Target.Status.CardId != CardId.Vernossiel||
+                @event.Target.PlayerIndex == PlayerIndex) 
+                return;
+            
             if (Card.Effect.Countdown <= 0)
             {
                 var location = Game.GetRandomCanPlayLocation(Card.PlayerIndex, true);
                 await Card.Effect.Summon(location, Card);
             }
         }
-
     }
 }
