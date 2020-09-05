@@ -7,9 +7,29 @@ using System;
 namespace Cynthia.Card
 {
     [CardEffectId("70040")]//莱里亚强弩手
-    public class LyrianArbalest : CardEffect, IHandlesEvent<AfterCardBoost>
-    {//每当相邻单位获得增益，对随机敌军单位造成1点伤害；自身增益大于或等于基础战力一半时，改为造成2点伤害。
+    public class LyrianArbalest : CardEffect
+    {//对1个敌军单位造成等同于同排单位数量的伤害。
         public LyrianArbalest(GameCard card) : base(card) { }
+        public override async Task<int> CardPlayEffect(bool isSpying, bool isReveal)
+        {
+            //计算己方同排的单位数量
+            var count = Game.RowToList(Card.PlayerIndex, Card.Status.CardRow).IgnoreConcealAndDead().Count();
+            var selectList = await Game.GetSelectPlaceCards(Card, selectMode: SelectModeType.AllRow);
+            if (!selectList.TrySingle(out var target))
+            {
+                return 0;
+            }
+            var row = (target.Status.CardRow.MyRowToIndex() + 1).IndexToMyRow();
+            await target.Effect.Damage(count, Card);
+            if (!row.IsOnPlace())
+            {
+                return 0;
+            }
+            await target.Effect.Move(new CardLocation(row, int.MaxValue), Card);
+            return 0;
+        }
+
+        /*
         public async Task HandleEvent(AfterCardBoost @event)
         {
             if (@event.Target.PlayerIndex != Card.PlayerIndex || !Card.Status.CardRow.IsOnPlace())
@@ -44,5 +64,6 @@ namespace Cynthia.Card
             }
             await Task.CompletedTask;
         }
+        */
     }
 }

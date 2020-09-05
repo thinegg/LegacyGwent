@@ -29,7 +29,9 @@ namespace Cynthia.Card
         public async Task HandleEvent(AfterUnitDown @event)
         {
             if (@event.Target.Status.CardId != CardId.Vernossiel||
-                @event.Target.PlayerIndex == PlayerIndex) 
+                @event.Target.PlayerIndex != PlayerIndex||
+                Card.Status.CardRow.IsOnPlace()||
+                Card.Status.CardRow.IsInCemetery()) 
                 return;
             
             if (Card.Effect.Countdown <= 0)

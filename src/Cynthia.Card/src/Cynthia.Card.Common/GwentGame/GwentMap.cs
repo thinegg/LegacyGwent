@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 61);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 62);
 
 
         public class MultilingualString
@@ -11230,7 +11230,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[] { },
                     Flavor = "“你手下的人可就是史帕拉流亡军？你便是人称野狗公爵的那位？”",
-                    Info = "若位于手牌、牌组或己方半场：己方回合中，有单位被改变所在排别时获得1点增益。",
+                    Info = "将所有单位移至随机排。每移动1个单位，便受到3点伤害。若位于牌组或手牌：己方回合中，每有1个单位被改变所在排别时获得1点增益。",
                     CardArtsId = "d15200000",
                 }
             },
@@ -11389,7 +11389,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Soldier},
                     Flavor = "“我能百步穿杨！不过，我可能得多射几箭……”",
-                    Info = "每当相邻单位获得增益，对随机敌军单位造成1点伤害；自身增益大于或等于基础战力一半时，改为造成2点伤害。",
+                    Info = "对1个敌军单位造成等同于同排单位数量的伤害，并将其上移一排。",
                     CardArtsId = "d15410000",
                 }
             },
@@ -11399,7 +11399,7 @@ namespace Cynthia.Card
                 {
                     CardId ="70041",
                     Name="斯瓦勃洛狂信者",
-                    Strength=11,
+                    Strength=10,
                     Group=Group.Copper,
                     Faction = Faction.Skellige,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -11409,7 +11409,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cultist},
                     Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
-                    Info = "回合结束时对自身造成3点伤害，然后随机对一个敌军单位造成3点伤害。",
+                    Info = "回合结束时，对1个战力最低的敌军单位造成3点伤害，然后对自身造成3点伤害。",
                     CardArtsId = "d16730000",
                 }
             },
@@ -11440,7 +11440,7 @@ namespace Cynthia.Card
                 {
                     CardId ="70043",
                     Name="米薇",
-                    Strength=6,
+                    Strength=7,
                     Group=Group.Leader,
                     Faction = Faction.NorthernRealms,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -11449,8 +11449,9 @@ namespace Cynthia.Card
                     IsCountdown = false,
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Leader},
+                    CrewCount = 1,
                     Flavor = "莱里亚女王米薇闷闷不乐地摆弄着项链上的硕大红宝石，美丽而丰满的嘴唇不时扭曲起来。",
-                    Info = "使己方半场、手牌、牌库各1个单位获得4点增益。",
+                    Info = "使己方半场、手牌、牌库各1个单位获得4点增益。操控。",
                     CardArtsId = "d15660000",
                 }
             },
