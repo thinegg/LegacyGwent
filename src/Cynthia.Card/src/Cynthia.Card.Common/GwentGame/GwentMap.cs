@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 63);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 65);
 
 
         public class MultilingualString
@@ -11230,7 +11230,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[] { },
                     Flavor = "“你手下的人可就是史帕拉流亡军？你便是人称野狗公爵的那位？”",
-                    Info = "将所有单位移至随机排。每移动1个单位，便受到3点伤害。若位于牌组或手牌：己方回合中，每有1个单位被改变所在排别时获得1点增益。",
+                    Info = "将所有单位移至随机排。每移动1个单位，便受到3点伤害。若位于手牌、牌组：己方回合中，每有1个单位被移动，便获得1点增益。",
                     CardArtsId = "d15200000",
                 }
             },
@@ -11461,17 +11461,17 @@ namespace Cynthia.Card
                 {
                     CardId ="70044",
                     Name="弗妮希尔",
-                    Strength=5,
-                    Group=Group.Silver,
+                    Strength=4,
+                    Group=Group.Gold,
                     Faction = Faction.ScoiaTael,
-                    CardUseInfo = CardUseInfo.EnemyRow,
+                    CardUseInfo = CardUseInfo.MyRow,
                     CardType = CardType.Unit,
                     IsDoomed = false,
                     IsCountdown = false,
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Officer,Categorie.Elf},
                     Flavor = "原来住在森林里的东西，并非守卫队长所说的什么“毛茸茸的鬼玩意儿”，而是松鼠党突击队。领头的人名叫弗妮希尔……",
-                    Info = "间谍。将3张“弗妮希尔的突击队”加入牌组。触发1次牌组中所有“弗妮希尔的突击队”的交换效果。",
+                    Info = "将2张“弗妮希尔的突击队”加入牌组。触发1次牌组中所有“弗妮希尔的突击队”的交换效果。",
                     CardArtsId = "d19900000",
                 }
             },
