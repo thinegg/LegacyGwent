@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 62);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 63);
 
 
         public class MultilingualString
