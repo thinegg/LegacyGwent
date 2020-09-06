@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 65);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 66);
 
 
         public class MultilingualString
@@ -11228,7 +11228,7 @@ namespace Cynthia.Card
                     IsDoomed = false,
                     IsCountdown = false,
                     IsDerive = false,
-                    Categories = new Categorie[] { },
+                    Categories = new Categorie[] { Categorie.Officer},
                     Flavor = "“你手下的人可就是史帕拉流亡军？你便是人称野狗公爵的那位？”",
                     Info = "将所有单位移至随机排。每移动1个单位，便受到3点伤害。若位于手牌、牌组：己方回合中，每有1个单位被移动，便获得1点增益。",
                     CardArtsId = "d15200000",
@@ -11473,6 +11473,46 @@ namespace Cynthia.Card
                     Flavor = "原来住在森林里的东西，并非守卫队长所说的什么“毛茸茸的鬼玩意儿”，而是松鼠党突击队。领头的人名叫弗妮希尔……",
                     Info = "将2张“弗妮希尔的突击队”加入牌组。触发1次牌组中所有“弗妮希尔的突击队”的交换效果。",
                     CardArtsId = "d19900000",
+                }
+            },
+            {
+                "70046",//帝国占卜师 ImperialDiviner
+                new GwentCard()
+                {
+                    CardId ="70046",
+                    Name="帝国占卜师",
+                    Strength=8,
+                    Group=Group.Copper,
+                    Faction = Faction.Nilfgaard,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Mage},
+                    Flavor = "为了把女儿找到，恩希尔·恩瑞斯皇帝不遗余力。就算是动用他一贯鄙夷的法师和女术士也在所不惜。",
+                    Info = "对方每有1张被揭示的牌，便获得2点增益。若被揭示，则双方每有1张被揭示的牌，便获得2点增益。",
+                    CardArtsId = "d14210000",
+                }
+            },
+            {
+                "70049",//滚油 BoilingOil
+                new GwentCard()
+                {
+                    CardId ="70049",
+                    Name="滚油",
+                    Strength=0,
+                    Group=Group.Copper,
+                    Faction = Faction.NorthernRealms,
+                    CardUseInfo = CardUseInfo.AnyPlace,
+                    CardType = CardType.Special,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Special,Categorie.Item},
+                    Flavor = "对你的皮肤不好。",
+                    Info = "对1个敌军单位造成7点伤害。对其相邻单位造成溢出的伤害。",
+                    CardArtsId = "d19820000",
                 }
             },
         };
