@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 67);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 68);
 
 
         public class MultilingualString
@@ -11533,6 +11533,26 @@ namespace Cynthia.Card
                     Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
                     Info = "回合结束时，对1个战力最低的敌军单位造成4点伤害，然后对自身造成4点伤害。",
                     CardArtsId = "d167300000",
+                }
+            },
+            {
+                "70050",//狂信者测试3号 SvalblodFanatic3
+                new GwentCard()
+                {
+                    CardId ="70050",
+                    Name="狂信者测试3号",
+                    Strength=10,
+                    Group=Group.Copper,
+                    Faction = Faction.Skellige,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Cultist},
+                    Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
+                    Info = "回合结束时，对1个战力最低的敌军单位造成4点伤害，然后对自身造成4点伤害。",
+                    CardArtsId = "d16730000",
                 }
             },
         };
