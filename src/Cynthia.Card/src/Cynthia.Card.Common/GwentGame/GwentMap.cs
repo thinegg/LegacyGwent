@@ -11515,8 +11515,7 @@ namespace Cynthia.Card
                     CardArtsId = "d19820000",
                 }
             },
-            
-             {
+            {
                 "70050",//狂信者测试2号 SvalblodFanatic
                 new GwentCard()
                 {
