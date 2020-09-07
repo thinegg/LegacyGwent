@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 66);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 67);
 
 
         public class MultilingualString
@@ -11513,6 +11513,27 @@ namespace Cynthia.Card
                     Flavor = "对你的皮肤不好。",
                     Info = "对1个敌军单位造成7点伤害。对其相邻单位造成溢出的伤害。",
                     CardArtsId = "d19820000",
+                }
+            },
+            
+             {
+                "70050",//狂信者测试2号 SvalblodFanatic
+                new GwentCard()
+                {
+                    CardId ="70050",
+                    Name="狂信者测试2号",
+                    Strength=10,
+                    Group=Group.Copper,
+                    Faction = Faction.Skellige,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cultist},
+                    Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
+                    Info = "回合结束时，对1个战力最低的敌军单位造成4点伤害，然后对自身造成4点伤害。",
+                    CardArtsId = "d167300000",
                 }
             },
         };
