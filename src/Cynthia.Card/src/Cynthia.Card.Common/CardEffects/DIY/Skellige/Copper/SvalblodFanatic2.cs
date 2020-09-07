@@ -6,7 +6,7 @@ using System;
 namespace Cynthia.Card
 {
     [CardEffectId("70050")]//狂信者测试2号
-    public class SvalblodFanatic : CardEffect, IHandlesEvent<AfterTurnOver>
+    public class SvalblodFanatic2 : CardEffect, IHandlesEvent<AfterTurnOver>
     {//回合结束时，对1个战力最低的敌军单位造成4点伤害，然后对自身造成4点伤害。
         public SvalblodFanatic(GameCard card) : base(card) { }
         public async Task HandleEvent(AfterTurnOver @event)
