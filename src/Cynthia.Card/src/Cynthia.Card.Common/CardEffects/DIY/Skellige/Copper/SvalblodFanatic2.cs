@@ -11,6 +11,7 @@ namespace Cynthia.Card
         public SvalblodFanatic2(GameCard card) : base(card) { }
         public async Task HandleEvent(AfterTurnOver @event)
         {
+            await Game.Debug("SvalblodFanatic2 ability");
             if (!Card.Status.CardRow.IsOnPlace()
             || @event.PlayerIndex != PlayerIndex)
             {
