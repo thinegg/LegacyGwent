@@ -11,7 +11,6 @@ namespace Cynthia.Card
         public override async Task<int> CardUseEffect()
         {
             var list = Game.PlayersCemetery[Card.PlayerIndex]
-            .Concat(Game.PlayersCemetery[Game.AnotherPlayer(Card.PlayerIndex)])
             .Where(x => x.Status.Group == Group.Copper 
             && x.CardInfo().CardType == CardType.Unit 
             && x.HasAllCategorie(Categorie.Soldier) 
