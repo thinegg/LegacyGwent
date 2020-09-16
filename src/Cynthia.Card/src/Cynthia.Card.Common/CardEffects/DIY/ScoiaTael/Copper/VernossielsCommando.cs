@@ -28,13 +28,12 @@ namespace Cynthia.Card
         
         public async Task HandleEvent(AfterUnitDown @event)
         {
-            if (@event.Target.Status.CardId != CardId.Vernossiel||
-                @event.Target.PlayerIndex != PlayerIndex||
-                Card.Status.CardRow.IsOnPlace()||
-                Card.Status.CardRow.IsInCemetery()) 
+            if (Card.Status.CardRow.IsOnPlace()||
+                Card.Status.CardRow.IsInCemetery()||
+                Card.Status.CardRow.IsInHand()) 
                 return;
             
-            if (Card.Effect.Countdown <= 0)
+            if (Card.Effect.Countdown == 0)
             {
                 var location = Game.GetRandomCanPlayLocation(Card.PlayerIndex, true);
                 await Card.Effect.Summon(location, Card);
