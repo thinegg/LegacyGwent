@@ -8,12 +8,12 @@ namespace Cynthia.Card
 {
     [CardEffectId("70040")]//莱里亚强弩手
     public class LyrianArbalest : CardEffect
-    {//对1个敌军单位造成等同于同排单位数量的伤害。
+    {//对1个敌军单位造成等同于同排北方领域单位数量的伤害。
         public LyrianArbalest(GameCard card) : base(card) { }
         public override async Task<int> CardPlayEffect(bool isSpying, bool isReveal)
         {
             //计算己方同排的单位数量
-            var count = Game.RowToList(Card.PlayerIndex, Card.Status.CardRow).IgnoreConcealAndDead().Count();
+            var count = Game.RowToList(Card.PlayerIndex, Card.Status.CardRow).IgnoreConcealAndDead().Where(x => x.Status.Faction == Faction.NorthernRealms).Count();
             var selectList = await Game.GetSelectPlaceCards(Card, selectMode: SelectModeType.AllRow);
             if (!selectList.TrySingle(out var target))
             {

@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 67);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 68);
 
 
         public class MultilingualString
@@ -11407,7 +11407,7 @@ namespace Cynthia.Card
                     IsDoomed = false,
                     IsCountdown = false,
                     IsDerive = false,
-                    Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cultist},
+                    Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cursed,Categorie.Cultist},
                     Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
                     Info = "回合结束时，对1个战力最低的敌军单位造成3点伤害，然后对自身造成3点伤害。",
                     CardArtsId = "d16730000",
@@ -11466,7 +11466,7 @@ namespace Cynthia.Card
                     Faction = Faction.ScoiaTael,
                     CardUseInfo = CardUseInfo.MyRow,
                     CardType = CardType.Unit,
-                    IsDoomed = false,
+                    IsDoomed = true,
                     IsCountdown = false,
                     IsDerive = false,
                     Categories = new Categorie[]{ Categorie.Officer,Categorie.Elf},
@@ -11529,10 +11529,110 @@ namespace Cynthia.Card
                     IsDoomed = false,
                     IsCountdown = false,
                     IsDerive = false,
-                    Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cultist},
+                    Categories = new Categorie[]{ Categorie.Soldier,Categorie.Cursed,Categorie.Cultist},
                     Flavor = "并非所有人都配获得斯瓦勃洛的祝福。",
                     Info = "回合结束时，对1个战力最低的敌军单位造成4点伤害，然后对自身造成4点伤害。",
                     CardArtsId = "d167300000",
+                }
+            },
+            {
+                "70051",//洞穴巨魔 CaveTroll
+                new GwentCard()
+                {
+                    CardId ="70051",
+                    Name="洞穴巨魔",
+                    Strength=10,
+                    Group=Group.Copper,
+                    Faction = Faction.Monsters,
+                    CardUseInfo = CardUseInfo.MyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Ogroid},
+                    Flavor = "巨魔不仅没头脑，饿肚子时还容易不高兴。两样凑在一起，极其危险。",
+                    Info = "回合开始时，使1个战力最高的敌军单位获得3点增益，然后自身获得3点增益。",
+                    CardArtsId = "d19240000",
+                }
+            },
+            {
+                "70052",//滚油 BoilingOil2
+                new GwentCard()
+                {
+                    CardId ="70052",
+                    Name="滚油(复本)",
+                    Strength=0,
+                    Group=Group.Silver,
+                    Faction = Faction.Neutral,
+                    CardUseInfo = CardUseInfo.AnyPlace,
+                    CardType = CardType.Special,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Special,Categorie.Item},
+                    Flavor = "对你的皮肤不好。",
+                    Info = "对1个敌军单位造成9点伤害。对其相邻单位造成溢出的伤害。",
+                    CardArtsId = "d19820000",
+                }
+            },
+            {
+                "70053",//弗妮希尔 Vernossiel2
+                new GwentCard()
+                {
+                    CardId ="70053",
+                    Name="弗妮希尔（复本）",
+                    Strength=5,
+                    Group=Group.Silver,
+                    Faction = Faction.ScoiaTael,
+                    CardUseInfo = CardUseInfo.EnemyRow,
+                    CardType = CardType.Unit,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Officer,Categorie.Elf},
+                    Flavor = "原来住在森林里的东西，并非守卫队长所说的什么“毛茸茸的鬼玩意儿”，而是松鼠党突击队。领头的人名叫弗妮希尔……",
+                    Info = "间谍。将3张“弗妮希尔的突击队”加入牌组。触发1次牌组中所有“弗妮希尔的突击队”的交换效果。",
+                    CardArtsId = "d19900000",
+                }
+            },
+            {
+                "70054",//假死 FeignDeath
+                new GwentCard()
+                {
+                    CardId ="70054",
+                    Name="假死",
+                    Strength=0,
+                    Group=Group.Silver,
+                    Faction = Faction.ScoiaTael,
+                    CardUseInfo = CardUseInfo.AnyPlace,
+                    CardType = CardType.Special,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Tactic,Categorie.Special},
+                    Flavor = "设埋伏一般都得藏起来。不过……也有例外。",
+                    Info = "复活2个战力高于5点的铜色“士兵”单位，并对它们各造成5点伤害。",
+                    CardArtsId = "d19720000",
+                }
+            },
+            {
+                "70055",//疯狂的冲锋 MadCharge
+                new GwentCard()
+                {
+                    CardId ="70055",
+                    Name="疯狂的冲锋",
+                    Strength=0,
+                    Group=Group.Silver,
+                    Faction = Faction.NorthernRealms,
+                    CardUseInfo = CardUseInfo.AnyPlace,
+                    CardType = CardType.Special,
+                    IsDoomed = false,
+                    IsCountdown = false,
+                    IsDerive = false,
+                    Categories = new Categorie[]{ Categorie.Tactic,Categorie.Special},
+                    Flavor = "“战马撒开腿后谁也拦不住。所以到时候你能做的，就是放低长枪，闭上眼睛，求老天爷开恩。”",
+                    Info = "使一个友军单位与一个敌军单位对决。",
+                    CardArtsId = "d17390000",
                 }
             },
         };
