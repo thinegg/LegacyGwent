@@ -7,13 +7,13 @@ namespace Cynthia.Card
 {
     [CardEffectId("70032")]//Gascon
     public class Gascon : CardEffect, IHandlesEvent<AfterCardMove>
-    {//将所有单位移至随机排。每移动1个单位，便受到3点伤害。若位于牌组或手牌：己方回合中，每有1个单位被改变所在排别时获得1点增益。
+    {//将所有单位移至随机排，每移动1个单位，便受到2点伤害。若位于牌组或手牌：己方回合中，每有1个单位被改变所在排别时获得1点增益。
         public Gascon(GameCard card) : base(card) { }
         public override async Task<int> CardPlayEffect(bool isSpying, bool isReveal)
         {
             int moveCount = (Card.Status.Strength + Card.Status.HealthStatus - 1)/2;
             int i = 0;
-            var cards = Game.GetAllCard(Card.PlayerIndex, isHasConceal: true).Where(x => x.Status.CardRow.IsOnPlace() && x != Card).ToList();
+            var cards = Game.GetPlaceCards(AnotherPlayer).ToList();
             foreach (var card in cards)
             {
                 var row = (card.Status.CardRow.MyRowToIndex()).IndexToMyRow();
