@@ -42,7 +42,7 @@ namespace Cynthia.Card
         public Gascon(GameCard card) : base(card) { }
         public override async Task<int> CardPlayEffect(bool isSpying, bool isReveal)
         {
-            int moveCount = (card.Status.Strength + card.Status.HealthStatus)/2;
+            int moveCount = (Card.Status.Strength + Card.Status.HealthStatus)/2;
             var i = 0;
             var cards = Game.GetAllCard(Card.PlayerIndex, isHasConceal: true).Where(x => x.Status.CardRow.IsOnPlace() && x != Card).ToList();
             foreach (var card in cards)
