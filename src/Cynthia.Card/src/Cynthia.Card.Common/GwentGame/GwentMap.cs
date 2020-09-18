@@ -189,7 +189,7 @@ namespace Cynthia.Card
         }
 
         //更新CardMap内容请务必将CardMapVersion更新
-        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 69);
+        public static Version CardMapVersion { get; } = new Version(1, 0, 0, 70);
 
 
         public class MultilingualString
@@ -11220,7 +11220,7 @@ namespace Cynthia.Card
                 {
                     CardId = "70032",
                     Name = "加斯科",
-                    Strength = 3,
+                    Strength = 1,
                     Group = Group.Gold,
                     Faction = Faction.Neutral,
                     CardUseInfo = CardUseInfo.MyRow,
@@ -11230,7 +11230,7 @@ namespace Cynthia.Card
                     IsDerive = false,
                     Categories = new Categorie[] { Categorie.Officer},
                     Flavor = "“你手下的人可就是史帕拉流亡军？你便是人称野狗公爵的那位？”",
-                    Info = "将所有单位移至随机排。每移动1个单位，便受到2点伤害。若位于手牌、牌组：己方回合中，每有1个单位被移动，便获得1点增益。",
+                    Info = "对自身造成2点伤害并随机移动一个未被移动的敌军单位，重复此能力直至战力不足。若位于手牌、牌组：己方回合中，每有1个单位被移动，便获得1点增益。",
                     CardArtsId = "d15200000",
                 }
             },
